@@ -1,80 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DSA IN REAL LIFE</title>
-    <link rel="stylesheet" href="dsa.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Structures & Algorithms</title>
+  <link rel="stylesheet" href="dsa.css">
 </head>
 <body>
-    <!--HOME PAGE-->
-    <div id="home" class="page"></div>
-    <h1>DSA IN REAL-WORLD APPLICATIONS</h1>
-    <H3>#Master the logic, rule the Code</H3>
-    <h2>LEARN DSA(Data Structure Algorithm)</h2>
-    <p id="QUES">#1.WHAT IS DSA!??</p>
-    <pre>DSA stands for Data Structures and Algorithms, which represents the foundational building blocks of computer science and software development.
-Data structures focus on how data is organized and stored, while algorithms are the step-by-step procedures used to process that data and solve
-problems efficiently.
+
+  <nav class="navbar">
+    <div class="logo">DSA Real World Applications</div>
+    <ul class="nav-links">
+      <li><a href="#page1">Home</a></li>
+      <li><a href="#page2">Arrays</a></li>
+      <li><a href="#page3">Strings</a></li>
+      <li><a href="#page4">Sliding Window</a></li>
+    </ul>
+  </nav>
+
+  <section id="page1" class="page">
+    <div class="card animate-fade">
+     <h1>DATA STRUCTURE AND ALGORITHMS</h1>
+      <pre>Data Structures and Algorithms (DSA) form the backbone of computer science. A
+    <strong>Data Structure</strong> is a specific way of organizing, managing, and storing
+     data so that it can be accessed and modified efficiently.
+     An <strong>Algorithm</strong> is a step-by-step set of instructions designed to perform
+     a task or solve a problem.
     </pre>
-    <p id="QUES">->CORE COMPONENTS</p>
-    <pre><b>Data Structures:</b> The methods used to organize and store data in a computer so that it can be accessed and modified efficiently.
-Examples include arrays, linked lists, stacks, queues, trees, and graphs.
 
-<b>Algorithms:</b> A set of well-defined, step-by-step instructions designed to solve
-a specific problem or perform a calculation. Examples include sorting algorithms 
-(like Quicksort) and searching algorithms (like Binary Search).
+      <a href="#page2" class="btn">Explore Topics ↓</a>
+    </div>
+  </section>
+
+  <section id="page2" class="page">
+    <div class="card">
+      <h2>1. Arrays</h2>
+      <pre>An <strong>Array</strong> is a collection of items stored at contiguous memory locations.
+        It allows you to store multiple elements of the same type under a single variable name.
+
+        <strong style="color: red;">#1 Real World Applications</strong>
+<strong> ->Digital Images (2D/3D Arrays):</strong> Computer screens and image editing tools treat photos as
+         large grids of pixels. Each pixel holds color values like Red, Green, and Blue
+<strong>->Game Leaderboard:</strong>Game Leaderboards: Video games track top player scores in ordered 
+arrays to display ranks from highest to lowest.
+
+        <strong style="color: red;">#2 Code Example</strong>
+public class Main {
+    public static void main(String[] args) {
+        // 1. Declaration and Initialization
+        int[] numbers = {10, 20, 30, 40, 50};
+    }
+}
+<strong style="color: red;">           #3 Features</strong>
+</pre>
+      
+      <div class="features">
+        <div class="box">
+          <h3>Fixed Size</h3>
+          <pre>Memory size is defined at the time of creation.</pre>
+        </div>
+        <div class="box">
+          <h3>Fast Access</h3>
+          <pre>Retrieve any element in <strong>O(1)</strong>time 
+    using its index.</pre>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="page3" class="page">
+    <div class="card">
+      <h2>2. Strings</h2>
+      <pre>A <strong>String</strong> is a sequence of characters enclosed in quotes. In 
+        programming, strings are typically represented as arrays of characters terminated 
+        by a special character (like null in C).
+
+        <strong style="color: red;">#1 Real life Application</strong>
+        <strong>->Engines and Information Retrieval:</strong> Search Engines: Strings can be used
+         in many search engine techniques.
+        <strong>->Web browsers and tools:</strong>Google use string matching and processing to index
+         billions of web pages and find keywords matching user queries instantly
+
+         <strong style="color: red;">#2 Code Example</strong>
+         public class Main {
+             public static void main(String[] args) {
+                    // Creation
+                    String greeting = "Hello, World!"; 
+                    // Operations
+                    int length = greeting.length();// Get length (13)
+                    char firstChar = greeting.charAt(0);// Access index ( 'H' )
+                    String sub = greeting.substring(0, 5);// Get "Hello"
+                    System.out.println(greeting);
+    }
+}
+        <strong style="color: red;">      #3 Features</strong>
     </pre>
-    <p id="QUES">->WHY DSA MATTERS?</p>
-    <pre><b>Code Efficiency:</b>It teaches you how to write programs that run faster and use less memory, which is critical when handling
-large amounts of data.
+      <div class="features">
+        <div class="box">
+          <h3>Immutable vs Mutable</h3>
+          <p>Some languages allow modifying strings in place, while others create new strings.</p>
+        </div>
+        <div class="box">
+          <h3>Common Operations</h3>
+          <p>Concatenation, searching, sub-string extraction, and pattern matching.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<b>Problem-Solving Skills:</b> Mastering DSA sharpens your analytical thinking, helping you break down complex real-world problems into 
-manageable, logical steps.
+  <section id="page4" class="page">
+    <div class="card">
+      <h2>3. Sliding Window Technique</h2>
+      <pre>The <strong>Sliding Window</strong> technique is an algorithmic pattern used to perform 
+        operations on a specific window size of an Array or String. It optimizes nested loops into
+        a single loop.
 
-<b>Technical Interviews:</b> It is the primary subject tested during technical hiring rounds at top tech companies (like Google, Microsoft,
- and Meta).
+        <strong style="color: red;">#1 Real life Applications</strong>
+        <strong>->Bandwidth Tracking: </strong>Routers and network monitors use a sliding time window
+         to calculate data transfer rates or packet counts over a rolling period
+         <strong>Rate Limiting: </strong> APIs use sliding windows to track request frequencies from clients,
+             ensuring users do not exceed a specific number of requests per minute or hour.
+             <strong style="color: red;">#2 Code Example</strong>
+             public class constantWindow {
+          public static void main(String[] args) {
+        int[] arr={-1,2,5,4,5,-1};int k=4;int sum=0;
+        for(int i=0;i.k;i++){
+            sum=sum+arr[i];
+        }
+        int maxSum=sum;int l=0;int r=k-1;
+        while(r.arr.length-1){
+            sum=sum-arr[l];
+            l++;r++;
+            sum=sum+arr[r]; maxSum=Math.max(maxSum, sum);
+        }System.out.println(maxSum); 
+}
+}
+<strong style="color: red;">#3 Features:</strong>
 </pre>
-<hr>
-<!--ARRAY PAGE-->
-<div id="arrays" class="page">
-    <a href="#home" class="back-btn"> <-back</a>
-    <h1>ARRAYS</h1>
-    <h2>What is an Array?<h2>
-    <pre><strong>An Array:</strong> is a fundamental data structure in computer programming used to store a collection of elements, typically of the same data type,
-in a contiguous block of memory. Each item in an array is called an element, and its position is identified by a unique numerical index, which 
-usually starts at 0. Because the data is stored sequentially, programs can access any specific element almost instantly using its index, making
-arrays highly efficient for organizing and manipulating fixed-size sets of related data. 
-</pre>
-<h2>Real-World Use</h2>
-<pre><strong>E-Commerce:</strong>Product catalog filtering
-<strong>Digital Photos:</strong> A digital image is a two-dimensional (2D) array of pixels. Each pixel holds color values like RGB (Red, Green, Blue)
-numbers.
-<strong>Display Screens:</strong>strong Computer and phone screens use multi-dimensional pixel arrays to map and refresh what you see.
-<strong>Data Streams:</strong> Network cards and video streaming services use data buffers—built on arrays—to temporarily hold incoming
-data packets before rendering
-</pre>
-<h2>Code Examples</h2>
-<pre><code>const produ=[
-{id:101,price:29.99},
-{id:102,price:49.99},
-{id:103,price:69.99},
-{id:104,price:89.99},
-];
-const affordableProducts=products.filter(product => product.price< 30);
-</code></pre>
-<h2>Why Use Arrays?</h2>
-<pre>1)Product are stored as a colection and can easily be transversed, filtered, and displayed.
-2)Store Multiple Values: Instead of creating separate variables for every item 
-(like item1, item2, item3), you group them all under one name.
-3)Fast Data Access: Arrays use an index number to find items instantly. You can jump straight 
-to any item in constant time, O(1).
-</pre>
-<h2>Performance</h2>
-<pre><strong>Time complexity</strong>0(n)
-<strong>Space complexity</strong>0(n)</pre>
-</div>
-<hr>
+      <div class="features">
+        <div class="box">
+          <h3>Efficiency</h3>
+          <pre>Reduces time complexity from <strong>
+    O(N²)
+</strong>to <strong>
+    O(N)</strong>.</pre>
+        </div>
+        <div class="box">
+          <h3>Use Cases</h3>
+          <pre>Finding maximum sum subarray
+of size K, longest subarray 
+with distinct elements, etc.</pre>
+        </div>
+      </div>
+    </div>
+  </section>
 
 </body>
 </html>
