@@ -1,48 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="dsa.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arrays - Data Structures</title>
+  <link rel="stylesheet" href="string.css">
 </head>
 <body>
-    
-      <h2>2. Strings</h2>
-      <pre>A <strong>String</strong> is a sequence of characters enclosed in quotes. In 
+
+  <main class="container">
+    <article class="card">
+      
+      <!-- Header Section -->
+      <header class="card-header">
+        <span class="topic-tag">01. Data Structures</span>
+        <h1>Arrays</h1>
+        <p class="subtitle">
+          An <strong>String</strong> is a sequence of characters enclosed in quotes. In 
         programming, strings are typically represented as arrays of characters terminated 
-        by a special character (like null in C).
+        by a special character (like null in C). </p>
+      </header>
 
-        <strong style="color: red;">#1 Real life Application</strong>
-        <strong>->Engines and Information Retrieval:</strong> Search Engines: Strings can be used
-         in many search engine techniques.
-        <strong>->Web browsers and tools:</strong>Google use string matching and processing to index
-         billions of web pages and find keywords matching user queries instantly
+      <!-- Grid Content -->
+      <div class="content-grid">
+        
+        <!-- Real World Applications -->
+        <section class="section-box">
+          <div class="section-title">
+            <span class="badge">#1</span>
+            <h2>Real World Applications</h2>
+          </div>
+          <ul class="app-list">
+            <li>
+              <strong>Digital Images (2D/3D Arrays):</strong> 
+              Computer screens and image editing tools treat photos as large grids of pixels. Each pixel holds color values like Red, Green, and Blue.
+            </li>
+            <li>
+              <strong>Game Leaderboard:</strong> 
+              Video games track top player scores in ordered arrays to display ranks from highest to lowest.
+            </li>
+          </ul>
+        </section>
 
-         <strong style="color: red;">#2 Code Example</strong>
-         public class Main {
-             public static void main(String[] args) {
-                    // Creation
-                    String greeting = "Hello, World!"; 
-                    // Operations
-                    int length = greeting.length();// Get length (13)
-                    char firstChar = greeting.charAt(0);// Access index ( 'H' )
-                    String sub = greeting.substring(0, 5);// Get "Hello"
-                    System.out.println(greeting);
+        <!-- Code Example -->
+        <section class="section-box">
+          <div class="section-title">
+            <span class="badge">#2</span>
+            <h2>Code Example</h2>
+          </div>
+          <div class="code-wrapper">
+            <div class="code-header">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+              <span class="filename">Main.java</span>
+            </div>
+            <pre><code><span class="kwd">public class</span> <span class="cls">Main</span> {
+    <span class="kwd">public static void</span> <span class="fn">main</span>(<span class="typ">String</span>[] args) {
+        <span class="com">// 1. Declaration and Initialization</span>
+        <span class="typ">int</span>[] numbers = {<span class="num">10</span>, <span class="num">20</span>, <span class="num">30</span>, <span class="num">40</span>, <span class="num">50</span>};
     }
-}
-        <strong style="color: red;">      #3 Features</strong>
-    </pre>
-      <div class="features">
-        <div class="box">
-          <h3>Immutable vs Mutable</h3>
-          <p>Some languages allow modifying strings in place, while others create new strings.</p>
-        </div>
-        <div class="box">
-          <h3>Common Operations</h3>
-          <p>Concatenation, searching, sub-string extraction, and pattern matching.</p>
-        </div>
+}</code></pre>
+          </div>
+        </section>
+
+        <!-- Features -->
+        <section class="section-box full-width">
+          <div class="section-title">
+            <span class="badge">#3</span>
+            <h2>Key Features</h2>
+          </div>
+          <div class="features-grid">
+            <div class="feature-card">
+              <h3>Fixed Size</h3>
+              <p>Memory size is defined at the time of creation and cannot be dynamically resized.</p>
+            </div>
+            <div class="feature-card">
+              <h3>Fast Access</h3>
+              <p>Retrieve any element in <code>O(1)</code> time complexity using its index.</p>
+            </div>
+          </div>
+        </section>
+
       </div>
-    </div>
+    </article>
+  </main>
+
 </body>
 </html>
