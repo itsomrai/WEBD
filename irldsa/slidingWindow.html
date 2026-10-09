@@ -1,26 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="dsa.css">
+    <title>Sliding Window - Data Structures</title>
+    <link rel="stylesheet" href="slidingwindow.css">
 </head>
-<body>
-          <h2>3. Sliding Window Technique</h2>
-      <pre>The <strong>Sliding Window</strong> technique is an algorithmic pattern used to perform 
-        operations on a specific window size of an Array or String. It optimizes nested loops into
-        a single loop.
 
-        <strong style="color: red;">#1 Real life Applications</strong>
-        <strong>->Bandwidth Tracking: </strong>Routers and network monitors use a sliding time window
-         to calculate data transfer rates or packet counts over a rolling period
-         <strong>Rate Limiting: </strong> APIs use sliding windows to track request frequencies from clients,
-             ensuring users do not exceed a specific number of requests per minute or hour.
-             <strong style="color: red;">#2 Code Example</strong>
-             public class constantWindow {
-          public static void main(String[] args) {
-        int[] arr={-1,2,5,4,5,-1};int k=4;int sum=0;
+<body>
+
+    <main class="container">
+        <article class="card">
+
+            <!-- Header Section -->
+            <header class="card-header">
+                <span class="topic-tag">Data Structures</span>
+                <h1>Sliding Window</h1>
+                <p class="subtitle">
+                    The <strong>Sliding Window</strong> technique is an algorithmic pattern used to perform
+                    operations on a specific window size of an Array or String. It optimizes nested loops into
+                    a single loop. </p>
+            </header>
+
+            <!-- Grid Content -->
+            <div class="content-grid">
+
+                <!-- Real World Applications -->
+                <section class="section-box">
+                    <div class="section-title">
+                        <span class="badge">#1</span>
+                        <h2>Real World Applications</h2>
+                    </div>
+                    <ul class="app-list">
+                        <li>
+                            <strong>->Bandwidth Tracking: </strong>Routers and network monitors use a sliding time
+                            window
+                            Computer screens and image editing tools treat photos as large grids of pixels. Each pixel
+                            holds color values like Red, Green, and Blue.
+                        </li>
+                        <li>
+                            <strong>Rate Limiting: </strong> APIs use sliding windows to track request frequencies from
+                            clients,
+                            Video games track top player scores in ordered arrays to display ranks from highest to
+                            lowest.
+                        </li>
+                    </ul>
+                </section>
+
+                <!-- Code Example -->
+                <section class="section-box">
+                    <div class="section-title">
+                        <span class="badge">#2</span>
+                        <h2>Code Example</h2>
+                    </div>
+                    <div class="code-wrapper">
+                        <div class="code-header">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                            <span class="filename">Main.java</span>
+                        </div>
+                        <pre><code><span class="kwd">public class</span> <span class="cls">Main</span> {
+    <span class="kwd">public static void</span> <span class="fn">main</span>(<span class="typ">String</span>[] args) {
+        <span class="com">// 1. Declaration and Initialization</span>
+        <span class="typ">int</span>[] numbers = {<span class="num">10</span>, <span class="num">20</span>, <span class="num">30</span>, <span class="num">40</span>, <span class="num">50}
         for(int i=0;i.k;i++){
             sum=sum+arr[i];
         }
@@ -29,26 +73,41 @@
             sum=sum-arr[l];
             l++;r++;
             sum=sum+arr[r]; maxSum=Math.max(maxSum, sum);
-        }System.out.println(maxSum); 
-}
-}
-<strong style="color: red;">#3 Features:</strong>
-</pre>
-      <div class="features">
-        <div class="box">
-          <h3>Efficiency</h3>
-          <pre>Reduces time complexity from <strong>
-    O(N²)
-</strong>to <strong>
-    O(N)</strong>.</pre>
-        </div>
-        <div class="box">
-        <h3>Use Cases</h3>
-          <pre>Finding maximum sum subarray
-of size K, longest subarray 
-with distinct elements, etc.</pre>
-        </div>
-      </div>
-    </div>
+        }
+        System.out.println(maxSum); 
+        </span>}
+    }
+
+</code></pre>
+                    </div>
+                </section>
+
+                <!-- Features -->
+                <section class="section-box full-width">
+                    <div class="section-title">
+                        <span class="badge">#3</span>
+                        <h2>Key Features</h2>
+                    </div>
+                    <div class="features-grid">
+                        <div class="feature-card">
+                            <h3>Efficiency </h3>
+                            <p>Reduces time complexity from <strong>
+                                    O(N²) </strong>to <strong>
+                                    O(N)</strong>.</p>
+                        </div>
+                        <div class="feature-card">
+                            <h3>Use cases</h3>
+                            <p>Finding maximum sum subarray
+                                of size K, longest subarray
+                                with distinct elements, etc.</p>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </article>
+    </main>
+
 </body>
+
 </html>
